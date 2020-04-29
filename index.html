@@ -1,16 +1,45 @@
 <html>
     <head>
+        <title> Page d'accueil </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function redirect() {
-            window.location += 'user?nombre='+document.getElementById("nombre").value;
+            window.location += 'user?nom='+document.getElementById("nom").value+'&prenom='+document.getElementById("prenom").value+'&deuxprenom='+document.getElementById("deuxprenom").value;
         }
+            function authent() {
+                if (document.getElementById("motdepasse").value == 'projet6') {
+                    window.location += 'admin';
+                } else {
+                    alert('Mauvaise authentification !');
+                }
+            }
+            function anonyme() {
+                window.location += 'anonyme' ;
+            }
         </script>
     </head>
     <body>
-        <h1>Projet</h1>
-        <a href="./admin">Visualiser toutes les données</a>
-        <br>
-        <input type="text" id="nombre"></input>
-        <button onclick="redirect()">Créer la requête</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_T%C3%A9l%C3%A9com_Physique_Strasbourg.png" width=429px height=172px alt="TPS"></img>
+        <div style="display: inline-block;font-size: 3.5vw; width: 50vw;margin-left: 20vw;">Simulation de chirurgie endoluminale</div>
+        <div style="border: 1px solid black;text-align:center;height:14vw;margin-top:4vw;">
+            <p style="color: #005caa;font-size: 2vw;">Accès à l'ensemble des données</p>
+            <input type="text" id="motdepasse" placeholder="Mot de passe Admin" style="font-size: 1.5vw; height: 3vw;"></input>
+            <br>
+            <button onclick="authent()" style="font-size: 1.5vw;height: 3vw;">Accéder à toutes les données</button>
+        </div>
+        
+        <div style="border: 1px solid black;text-align:center; height: 14vw;">
+            <p style="color: #005caa; font-size: 2vw;">Accès à vos données</p>
+            <input type="text" id="nom" placeholder="Nom" style="font-size: 1.5vw;height: 3vw;"></input>
+            <input type="text" id="prenom" placeholder="Prénom" style="font-size: 1.5vw;height: 3vw;"></input>
+            <input type="text" id="deuxprenom" placeholder="Deuxième prénom" style="font-size: 1.5vw;height: 3vw;"></input>
+            <br>
+            <button onclick="redirect()" style="font-size: 1.5vw;height: 3vw;">Rechercher une personne</button>
+        </div>
+        
+        <div style="border: 1px solid black;text-align:center; height: 11vw;">
+            <p style="color: #005caa;font-size: 2vw;">Accès à la base anonyme</p>
+            <button onclick="anonyme()" style="font-size: 1.5vw;height: 3vw;">Accéder à la base anonyme</button>
+        </div>
     </body>
 </html>
