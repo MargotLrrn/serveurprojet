@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function redirect() {
+            window.location += 'user?nombre='+document.getElementById("nombre").value;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Projet</h1>
+        <a href="./admin">Visualiser toutes les données</a>
+        <br>
+        <input type="text" id="nombre"></input>
+        <button onclick="redirect()">Créer la requête</button>
+    </body>
+</html>
