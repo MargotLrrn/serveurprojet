@@ -30,6 +30,7 @@ db.all(sql_request, [], (err, rows) => {
     <th> Nombre de tentatives menu paramètres non modifiés </th> \
     <th> Age </th> \
     <th> Formation </th> \
+    <th> Niveau </th> \
     <th> Endoscope </th> \
     <th> Temps </th> \
     <th> Pourcentage erreur </th> \
@@ -45,6 +46,7 @@ db.all(sql_request, [], (err, rows) => {
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.MENUSANSPARAMETRES + '</td> \
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.AGE + '</td> \
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.FORMATION + '</td> \
+        <td style="border: 1px solid black; width: 7.69vw;">'+ row.NIVEAU + '</td> \
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.ENDOSCOPE + '</td> \
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.TEMPS + '</td> \
         <td style="border: 1px solid black; width: 7.69vw;">'+ row.POURCENTAGEERREUR + '</td> \
